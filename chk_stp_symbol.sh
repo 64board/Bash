@@ -3,7 +3,7 @@
 # janeiros@mbfcc.com
 # 2024-02-04
 
-usage() { echo "Usage: $(basename $0) -s <symbol> [-d <yyyy-mm-dd>]" 2>&1; exit 1; }
+usage() { echo "Usage: $(basename $0) [-p] -s <symbol> [-d <yyyy-mm-dd>]\n-p Previous business date" 2>&1; exit 1; }
 
 # Get previous date based on day of the week.
 # Argument is date format to use with OS date command.
