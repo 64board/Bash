@@ -22,7 +22,7 @@ get_previous_date() {
         DAYS=1  # Rest of days.
     fi
 
-    echo $(date -d -${DAYS}day +%Y-%m-%d)
+    echo $(date -d -${DAYS}day +${DATE_FORMAT})
 }
 
 LOG_DIR=/opt/cme_stp/log
