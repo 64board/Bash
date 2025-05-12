@@ -31,6 +31,7 @@ fi
 BIRTH_YEAR=${BIRTH_DATE:0:4}
 BIRTH_MONTH=${BIRTH_DATE:4:2}
 BIRTH_DAY=${BIRTH_DATE:6:2}
+# Use date command to find birthday's day of the week.
 BIRTH_WDAY=$(date --date=${BIRTH_DATE} +%A)
 
 echo "Birthday was on ${BIRTH_WDAY} ${BIRTH_YEAR}-${BIRTH_MONTH}-${BIRTH_DAY}"
@@ -41,6 +42,7 @@ CURRENT_YEAR=$(date +%Y)
 for (( YEAR = ${BIRTH_YEAR}; YEAR <= ${CURRENT_YEAR}; YEAR++ ))
 do
     DATE="${YEAR}-${BIRTH_MONTH}-${BIRTH_DAY}"
+    # Use date command to find the day of the week for the birthday date in a year.
     WDAY=$(date --date=${DATE} +%A)
 
     if [ ${WDAY} = ${BIRTH_WDAY} ]
